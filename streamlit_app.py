@@ -15,6 +15,8 @@ streamlit.dataframe(my_fruit_list)
 my_fruit_list = my_fruit_list.set_index('Fruit')
 # Let's put a pick list here so they can pick the fruit they want to include 
 streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 
 
 # Display the table on the page.
